@@ -1,4 +1,4 @@
 package arcade;
 
-public class war {
+public class War {
 }
