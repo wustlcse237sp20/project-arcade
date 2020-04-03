@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arcade/connect4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/Connect4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arcade/hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/Hangman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arcade/war.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/War.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arcade/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/Hangman.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1a0RItcLayUhri0aza2w3FlqrBt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
