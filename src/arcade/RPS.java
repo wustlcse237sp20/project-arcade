@@ -10,6 +10,7 @@ public class RPS {
 		System.out.println("Welcome to the game of rock paper scissors");
 		System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
 		Game();
+		//test
 		
 	}
 
