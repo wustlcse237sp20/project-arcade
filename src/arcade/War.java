@@ -6,11 +6,14 @@ public class War {
 		System.out.println("Welcome to the game of War");
 		System.out.println("Type 1 to begin or 0 to exit");
 		Scanner keyboard = new Scanner(System.in);
-		int enterorExit = keyboard.nextInt();
-
-		if(enterorExit == 1) {
-			System.out.println("Ok! Let's begin");
-		}
+//		int enterorExit = keyboard.nextInt();
+//
+//		if(enterorExit == 1) {
+//			System.out.println("Ok! Let's begin");
+//		}
+		
+		int abc = (int) (Math.random() * 10);
+		System.out.println(abc);
 
 		int cardDeck[] = new int[52]; //create the deck
 		
