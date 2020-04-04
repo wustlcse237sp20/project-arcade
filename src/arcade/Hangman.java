@@ -68,7 +68,7 @@ public class Hangman {
         int numGuessedRight = 0;
         String word = generateWord();
         //TEST ONLY
-        System.out.println("Selected word: " + word);
+        //System.out.println("Selected word: " + word);
 
         char[] solution = word.toCharArray();
         char[] progress = new char[solution.length];
