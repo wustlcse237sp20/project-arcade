@@ -31,6 +31,7 @@ public class Hangman {
         char letterInput = scanner.nextLine().charAt(0);  // Read user input
         return letterInput;
     }
+
     public static void printProgress(char[] progress){
         for(int i = 0; i < progress.length;i++){
             if(progress[i]!='\u0000'){
@@ -62,6 +63,15 @@ public class Hangman {
         }
         System.out.print(printable);
     }
+
+    public static boolean checkForWin(int numGuessedRight, char[] solution) {
+        if (numGuessedRight == solution.length) {
+            System.out.print("\tYOU WON!\n\n");
+            return true;
+        }
+        return false;
+    }
+
     public static void playHangman() {
         boolean isWon = false;
         int numWrongGuesses = 0;
@@ -103,12 +113,12 @@ public class Hangman {
             drawNumWrongGuesses(numWrongGuesses);
             printProgress(progress);
             //check if the user won
-            if (numGuessedRight == solution.length) {
-                isWon = true;
-                System.out.print("\tYOU WON!\n\n");
-            }
+            isWon = checkForWin(numGuessedRight, solution);
         }
     }
+
+
+
     public static void main(String[] args) {
         playHangman();
     }
