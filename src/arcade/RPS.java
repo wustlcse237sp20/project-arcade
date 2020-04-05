@@ -6,14 +6,11 @@ import java.lang.Math;
 public class RPS {
 	
 	static Scanner keyboard = new Scanner(System.in);
-	//char start =  keyboard.nextChar;
-	//USER CHOICE
 	static int comp=(int)(Math.random() * ((3 - 1) + 1)) + 1;
 	static String valueRetun = "";
 	static int computerObj = 0;
 
 	public static void main(String args[]){
-		
 		System.out.println("Welcome to the game of rock paper scissors");
 		System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
 		check();
