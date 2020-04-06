@@ -19,6 +19,7 @@ public class RPS {
         check();
     }
 
+    //edits anya
 
     public static void check(){
         comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;
