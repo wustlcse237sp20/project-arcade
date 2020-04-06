@@ -8,6 +8,7 @@ import arcade.RPS;
 
 public class RpsTesting {
 	
+	//edit
 	@Test
 	public void choiceRTest() {
 		String result = RPS.choiceR("r");
