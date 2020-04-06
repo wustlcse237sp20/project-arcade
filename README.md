@@ -10,9 +10,11 @@ project-arcade created by GitHub Classroom
 ## How to run:
 1. Clone repository and navigate to repository via the command line. 
 2. Use the following commands to run the program:
-* cd src
-* javac arcade/*
-* java arcade.UI
+```
+cd src
+javac arcade/*
+java arcade.UI
+```
 
 ## Iteration 1 Questions:
 ### What user stories were completed in this iteration?
