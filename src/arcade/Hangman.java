@@ -2,6 +2,11 @@ package arcade;
 import java.util.Scanner;
 
 public class Hangman {
+	
+    /**
+     * The function asks the user for the difficulty (easy, hard) 
+     * @return boolean false if user entered easy, boolean true if user entered hard
+     */
 
     public static boolean queryDifficulty(){
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
@@ -13,6 +18,11 @@ public class Hangman {
             return true;
         }
     }
+    
+    /**
+     * Generates words array for easy and hard words 
+     * @return a work from a selection of easy or hard words based on selected difficulty 
+     */
     public static String generateWord(){
         Boolean hardDifficulty = queryDifficulty();
         String[] easyWords = {"apple", "pear", "cherry", "noodle", "bread", "pasta", "chip", "salsa", "milk", "cookie"};
@@ -25,13 +35,23 @@ public class Hangman {
             return easyWords[randomIndex];
         }
     }
+    
+    /**
+     * User enters a letter
+     * @return a char for the first char in user input
+     */
     public static char queryUserGuess(){
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Please enter a letter.");
-        char letterInput = scanner.nextLine().charAt(0);  // Read user input
+        char letterInput = scanner.nextLine().charAt(0);  // Picks the first char in user input
         return letterInput;
     }
 
+    
+    /**
+     * Prints the current state of guesses, any unguessed letters are represented by an underscore 
+     * @param takes in a char array which stores the correctly guessed letters 
+     */
     public static void printProgress(char[] progress){
         for(int i = 0; i < progress.length;i++){
             if(progress[i]!='\u0000'){
@@ -44,6 +64,12 @@ public class Hangman {
         System.out.println();
 
     }
+    
+    
+    /**
+     * Draws the hangman based on the number of wrong guesses 
+     * @param and int value for number of wrong guesses 
+     */
     public static void drawNumWrongGuesses(int numWrong){
         String printable = "";
         if(numWrong == 0) {
@@ -64,6 +90,13 @@ public class Hangman {
         System.out.print(printable);
     }
 
+    
+    /**
+     * Checks for win
+     * @param int of numbers guessed right 
+     * @param char array of the target word
+     * @return returns true if number guessed right integer equals the char array solution length 
+     */
     public static boolean checkForWin(int numGuessedRight, char[] solution) {
         if (numGuessedRight == solution.length) {
             System.out.print("\tYOU WON!\n\n");
@@ -72,14 +105,16 @@ public class Hangman {
         return false;
     }
 
+    
+    /**
+     * Main game functionality 
+     */
     public static void playHangman() {
         boolean isWon = false;
         int numWrongGuesses = 0;
         int numGuessedRight = 0;
         String word = generateWord();
-        //TEST ONLY
-        //System.out.println("Selected word: " + word);
-
+  
         char[] solution = word.toCharArray();
         char[] progress = new char[solution.length];
         drawNumWrongGuesses(numWrongGuesses);
@@ -116,8 +151,6 @@ public class Hangman {
             isWon = checkForWin(numGuessedRight, solution);
         }
     }
-
-
 
     public static void main(String[] args) {
         playHangman();
