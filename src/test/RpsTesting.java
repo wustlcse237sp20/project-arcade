@@ -11,7 +11,7 @@ public class RpsTesting {
 	@Test
 	public void checkTest() {
 		String result = RPS.check();
-		assertEquals("")
+		//assertEquals("")
 	}
 	
 	@Test

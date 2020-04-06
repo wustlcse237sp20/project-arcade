@@ -19,8 +19,7 @@ public class RPS {
 		check();
 	}
 
-	
-	public static String check(){
+	public static void check(){
 		comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;	
 		String object= keyboard.next();	
 		if(object.equals("r")) {		
@@ -36,7 +35,6 @@ public class RPS {
 			System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
 			check();
 		}
-		return object;
 	}
 
 	public static String choiceR(String object) {
@@ -96,6 +94,6 @@ public class RPS {
 	}
 	return valueRetun;
 	}
-	
+
 
 }
