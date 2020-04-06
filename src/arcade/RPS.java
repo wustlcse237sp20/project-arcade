@@ -6,9 +6,12 @@ import java.lang.Math;
 public class RPS {
 	
 	static Scanner keyboard = new Scanner(System.in);
-	static int comp=(int)(Math.random() * ((3 - 1) + 1)) + 1;
-	static String valueRetun = "";
+	static int comp= 0;
+	static String valueRetun = " ";
 	static int computerObj = 0;
+	static int rock = 1;
+	static int paper = 2;
+	static int scissors = 3;
 
 	public static void main(String args[]){
 		System.out.println("Welcome to the game of rock paper scissors");
@@ -17,8 +20,9 @@ public class RPS {
 	}
 	
 	public static void check(){
+		comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;	
 		String object= keyboard.next();	
-		if(object.equals("r")) {
+		if(object.equals("r")) {		
 			choiceR(object);
 		}
 		else if(object.equals("p")) {
@@ -35,48 +39,59 @@ public class RPS {
 
 	public static String choiceR(String object) {
 		if(object.equals("r")) {
-			int rock=1;
 			if(rock==comp) {
-				valueRetun = "Computer entered Rock \nTie \nplease choose your object again (Rock-r, Paper-s, Scissors-s)"; 
+				valueRetun = "Computer entered Rock \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)";
+				System.out.println(valueRetun);
+				check();
 			}
 			else if(comp==2) {
 				valueRetun = "Computer entered Paper \nYou loose";
+				System.out.println(valueRetun);
 				}
-			else if(comp==3) {
+			else{
 				valueRetun = "Computer entered scissors \nYou win";
+				System.out.println(valueRetun);
 				}
 		}
-		System.out.println(valueRetun);
 		return valueRetun;
 	}
 	
 	public static String choiceP(String object) {
 	if(object.equals("p")) {
-		int paper=2;
 		if(paper==comp) {
-			valueRetun = "Computer entered paper \nTie \nplease choose your object again (Rock-r, Paper-s, Scissors-s)";
+			valueRetun = "Computer entered paper \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)";
+			System.out.println(valueRetun);
+			check();
 			 }
-		else if(comp==1)
+		else if(comp==1) {
 			valueRetun="Computer entered Rock \nYou Win";
-		else if(comp==3)
+			System.out.println(valueRetun);
+		}
+		else{
 			valueRetun="Computer entered scissors \nYou loose";
+			System.out.println(valueRetun);
+		}
 	}
-	System.out.println(valueRetun);
+
 	return valueRetun;
 	}
 	
 	public static String choiceS(String object) {
 	if(object.equals("s")) {
-		int scissors=3;
 		if(scissors==comp) {
-			valueRetun="Computer entered scissors \nTie \nplease choose your object again (Rock-r, Paper-s, Scissors-s)";
+			valueRetun="Computer entered scissors \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)";
+			System.out.println(valueRetun);
+			check();
 			}
-		else if(comp==1)
+		else if(comp==1) {
 			valueRetun="Computer entered Rock \nYou loose";
-		else if(comp==2)
+			System.out.println(valueRetun);
+		}
+		else {
 			valueRetun="Computer entered paper \nYou win";
+			System.out.println(valueRetun);
+		}
 	}
-	System.out.println(valueRetun);
 	return valueRetun;
 	}
 
