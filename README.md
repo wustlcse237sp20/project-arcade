@@ -11,6 +11,7 @@ project-arcade created by GitHub Classroom
 1. Clone repository and navigate to repository via the command line. 
 2. 
 
+## Iteration 1 Questions:
 ### What user stories were completed in this iteration?
 * A main game selection interface where a user can enter a number command to select a game to play
 * A Rock Paper Scissors game where a user can play against a computer player. The user enters either 'r' for rock, 'p' for paper, or 's' for scissors to play against a randomized computer player turn.
