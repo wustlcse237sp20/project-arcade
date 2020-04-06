@@ -19,6 +19,7 @@ public class RPS {
 		check();
 	}
 
+	
 	public static void check(){
 		comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;	
 		String object= keyboard.next();	
@@ -94,6 +95,7 @@ public class RPS {
 	}
 	return valueRetun;
 	}
+	
 
 
 }

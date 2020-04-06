@@ -9,12 +9,6 @@ import arcade.RPS;
 public class RpsTesting {
 	
 	@Test
-	public void checkTest() {
-		String result = RPS.check();
-		//assertEquals("")
-	}
-	
-	@Test
 	public void choiceRTest() {
 		String result = RPS.choiceR("r");
 		if(RPS.rock==RPS.comp) {
