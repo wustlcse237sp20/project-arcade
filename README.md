@@ -9,7 +9,10 @@ project-arcade created by GitHub Classroom
 
 ## How to run:
 1. Clone repository and navigate to repository via the command line. 
-2. 
+2. Use the following commands to run the program:
+* cd src
+* javac arcade/*
+* java arcade.UI
 
 ## Iteration 1 Questions:
 ### What user stories were completed in this iteration?
@@ -20,6 +23,7 @@ project-arcade created by GitHub Classroom
 * We intend on adding one additional game to our arcade. 
 * We need to implement a way to exit the game when playing, and a way to repeat a game without exiting our program and rerunning it. 
 ### Is there anything that you implemented but doesn't currently work?
-* Everything works so far!
+* The JUnit tests for the UI class are mostly written but are not working yet. 
+* The JUnit test for the check function in the RPS class is not completed. 
 
 
