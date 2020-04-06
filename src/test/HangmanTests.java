@@ -1,5 +1,6 @@
 package test;
 import arcade.Hangman;
+
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -66,6 +67,4 @@ public class HangmanTests {
         assertFalse(tester.checkForWin(threeChars,fiveLetterWord),"guessing 3/5 letters correctly should not yield a win");
         assertFalse(tester.checkForWin(fourChars,fiveLetterWord),"guessing 4/5 letters correctly should not yield a win");
     }
-
-
 }
