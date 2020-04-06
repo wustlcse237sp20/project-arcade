@@ -1,11 +1,11 @@
 package arcade;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class War {
 	public static void main(String args[]){
 		System.out.println("Welcome to the game of War");
 		System.out.println("Type 1 to begin or 0 to exit");
-		Scanner keyboard = new Scanner(System.in);
+		//Scanner keyboard = new Scanner(System.in);
 //		int enterorExit = keyboard.nextInt();
 //
 //		if(enterorExit == 1) {

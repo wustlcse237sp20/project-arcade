@@ -5,21 +5,22 @@ import java.lang.Math;
 
 public class RPS {
 	
-	static Scanner keyboard = new Scanner(System.in);
-	static int comp= 0;
-	static String valueRetun = " ";
-	static int computerObj = 0;
-	static int rock = 1;
-	static int paper = 2;
-	static int scissors = 3;
+	public static Scanner keyboard = new Scanner(System.in);
+	public static int comp= 0;
+	public static String valueRetun = " ";
+	public static int computerObj = 0;
+	public static int rock = 1;
+	public static int paper = 2;
+	public static int scissors = 3;
 
 	public static void main(String args[]){
 		System.out.println("Welcome to the game of rock paper scissors");
 		System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
 		check();
 	}
+
 	
-	public static void check(){
+	public static String check(){
 		comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;	
 		String object= keyboard.next();	
 		if(object.equals("r")) {		
@@ -35,6 +36,7 @@ public class RPS {
 			System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
 			check();
 		}
+		return object;
 	}
 
 	public static String choiceR(String object) {
@@ -94,5 +96,6 @@ public class RPS {
 	}
 	return valueRetun;
 	}
+	
 
 }
