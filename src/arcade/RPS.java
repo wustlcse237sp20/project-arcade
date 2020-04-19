@@ -7,22 +7,25 @@ public class RPS {
 
     public static Scanner keyboard = new Scanner(System.in);
     public static int comp= 0;
-    public static String valueRetun = " ";
+    public static String valueRetun = " "; //updated depending on user choice 
     public static int computerObj = 0;
     public static int rock = 1;
     public static int paper = 2;
     public static int scissors = 3;
 
     public static void main(){
-        System.out.println("Welcome to the game of rock paper scissors");
+        System.out.println("Welcome to the game of rock paper scissors"); //initial print messages 
         System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
-        check();
+        check(); 
     }
 
-
+    
+    /**
+     * Checks the user input as a string value for corectness  
+     */
     public static void check(){
-        comp = (int)(Math.random() * ((3 - 1) + 1)) + 1;
-        String object= keyboard.next();
+        comp = (int)(Math.random() * ((3 - 1) + 1)) + 1; //generates a random value from the range 1-3 as an int
+        String object= keyboard.next(); //captures the user's string input 
         if(object.equals("r")) {
             choiceR(object);
         }
@@ -38,6 +41,12 @@ public class RPS {
         }
     }
 
+    
+    /**
+     * Game options if the user inputs rock 
+     * @param enteres a string with the string value of the user input
+     * returns a string of a win/loose/tie message 
+     */
     public static String choiceR(String object) {
         if(object.equals("r")) {
             if(rock==comp) {
@@ -54,9 +63,15 @@ public class RPS {
                 System.out.println(valueRetun);
             }
         }
-        return valueRetun;
+        return valueRetun; //print message 
     }
 
+    /**
+     * Game options if the user inputs paper 
+     * @param enteres a string with the string value of the user input
+     * returns a string of a win/loose/tie message 
+     */
+    
     public static String choiceP(String object) {
         if(object.equals("p")) {
             if(paper==comp) {
@@ -74,8 +89,14 @@ public class RPS {
             }
         }
 
-        return valueRetun;
+        return valueRetun; //print message 
     }
+    
+    /**
+     * Game options if the user inputs scissors 
+     * @param enteres a string with the string value of the user input
+     * returns a string of a win/loose/tie message 
+     */
 
     public static String choiceS(String object) {
         if(object.equals("s")) {
@@ -93,7 +114,7 @@ public class RPS {
                 System.out.println(valueRetun);
             }
         }
-        return valueRetun;
+        return valueRetun; //print message 
     }
 
 
