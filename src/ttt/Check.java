@@ -3,22 +3,17 @@ package ttt;
 
 public class Check {
 	
-	public static boolean gameOver() {
-		while(Position.moves>9 && diagonalWin()==false) {
-			return false;
-		}
-		return true;
+	public static boolean checkforwin() {
+		return diagonalWin();
 	}
 	
 	public static boolean diagonalWin() {
-		if(TicTacToe.board[1][1] == TicTacToe.board[2][2] && TicTacToe.board[2][2] == TicTacToe.board[3][3]) {
-			return true;
-		}
-		else if (TicTacToe.board[3][1] == TicTacToe.board[2][2] && TicTacToe.board[2][2] == TicTacToe.board[1][3]) {
-			return true;
-		}
-		return false;
+		 return ((checkRowCol(TicTacToe.board[0][0], TicTacToe.board[1][1], TicTacToe.board[2][2]) == true) || (checkRowCol(TicTacToe.board[0][2], TicTacToe.board[1][1], TicTacToe.board[2][0]) == true));
 	}
 	
+	 private static boolean checkRowCol(char c1, char c2, char c3) {
+		    return ((c1 != '-') && (c1 == c2) && (c2 == c3)); 
+	 }
+		      
 
 }
