@@ -15,19 +15,19 @@ public class TicTacToe {
 		 
 		for(int i = 0; i<3; i++) {
 			for(int j = 0; j<3; j++) {
-				board[i][j] = '-';
+				board[i][j] = '-'; //initializing entire board with '-'
 			}
 		}
-		 run();
+		 run(); //runs actual game (below)
 	}
 	
 	public static void run() {
-		 while(!Check.checkforwin()) {
+		 while(!Check.checkforwin()) { //while no wins have been made
 			 GameBoard.printBoard();
 			 Position.gatherInput();
 			 Position.userMove();
 		
-		 }
+		 } //game has ended 
 		 GameBoard.printBoard();
 		 System.out.println("End of Game");
 	}
