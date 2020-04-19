@@ -1,66 +1,151 @@
 package arcade;
 import arcade.Hangman;
 import arcade.RPS;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+
 public class UI {
+	
+    public static Scanner scanner = new Scanner(System.in);
+	public static Map<Integer, String> games = new HashMap<Integer, String>();
+	public static int currentGame = 0;
+	
+	
+	public static void populateMap() {
+		games.put(1, "Hangman");
+		games.put(2, "Rock, Paper, Scissors");
+		games.put(3, "Connect4");
+	}
+	
+	//things i've done: 
+	//1: refactor main method into smaller chunks
+	//2: refactor while(badInput) loop to be simplified
+		//didn't need to check twice the value of the input
+		//moved print statements into the runfile method
+	//3: add in Connect 4 gameplay
+		//alter checkForValidInput and  "3"
+	
     public static void main(String[] args) {
-        System.out.println("Welcome to the Java Arcade!" + "\n" +
-                "Select 1 or 2, and then press enter to play!" + "\n" +
-                "Press 1 for Hangman" + "\n" + "Press 2 for Rock, Paper, Scissors");
+    	populateMap();
+    	System.out.println("Welcome to the Java Arcade!");
+        runArcade();
+        scanner.close();
+    }
 
-        Scanner scanner = new Scanner(System.in);
-
+	private static void runArcade() {
+		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n" +
+                "Press 1 for Hangman" + "\n" + "Press 2 for Rock, Paper, Scissors" + "\n" +
+                "Press 3 for Connect 4");
         boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
                 int input = scanner.nextInt();
-                if(validInput(input)) {
-                    badInput = false;
-                    if(input == 1) {
-                        System.out.println("Entering Hangman...");
-                        runfile(input);
-                    }
-                    else if(input == 2) {
-                        System.out.println("Entering Rock, Paper, Scissors...");
-                        runfile(input);
-                    }
+                if(checkForValidInput(input)) {
+                	badInput=false;
+                	updateCurrentGame(input);
+                	runFile(input);
                 }
-                else {
-                    System.out.println("Invalid input. Please select 1 or 2");
+                else { //if not 1, 2 or 3
+                    System.out.println("Invalid input. Please select 1, 2, or 3");
                     scanner.nextLine();
                 }
             }
-            else {
-                System.out.println("Invalid input. Please select 1 or 2");
+            else { //if not an int
+                System.out.println("Invalid input. Please select 1, 2, or 3");
                 scanner.nextLine();
             }
         }
-        scanner.close();
-    }
+	}
 
     /**
-     * returns true once the input is 1 or 2
-     * @param input
+     * returns true once the input is 1, 2, or 3
+     * @param input 
      * @return
      */
-    public static boolean validInput(int input) {
-        if(input == 1 || input == 2) {
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
-    public static boolean runfile(int input) {
-        if (input == 1) {
-            Hangman.playHangman();
-            return true;
-        }
-        else if (input == 2 ) {
-            RPS.main();
+    public static boolean checkForValidInput(int input) {
+        if(input == 1 || input == 2 || input == 3) {
             return true;
         }
         return false;
     }
+
+    /**
+     * changes the value of currentGame to reflect most recently selected game
+     * @param input
+     */
+	public static void updateCurrentGame(int input) {
+		currentGame = input;
+	}
+    
+    /**
+     * runs the selected game, should always return true
+     * @param input
+     * @return
+     */
+    public static boolean runFile(int input) {
+        if (input == 1) {
+        	System.out.println("Entering Hangman...");
+            Hangman.playHangman();
+            playAgain();
+            return true;
+        }
+        else if (input == 2) {
+        	System.out.println("Entering Rock, Paper, Scissors...");
+            RPS.main();
+            playAgain();
+            return true;
+        }
+        else if(input == 3) {
+        	System.out.println("Entering Connect 4...");
+        	Connect4.main();
+            playAgain();
+        	return true;
+        }
+        return false;
+  
+    }
+
+    
+    /**
+     * allows the user to continue playing
+     */
+    public static void playAgain() {
+    	System.out.println("Press 1 to play " + games.get(currentGame) + " again. Press 2 to exit to main menu");
+    	boolean badInput = true;
+        while(badInput) {
+            if(scanner.hasNextInt()) {
+                int input = scanner.nextInt();
+                if(input == 1) {
+                	badInput=false;
+                	runFile(currentGame);
+                	return;
+                }
+                if(input == 2) {
+                	badInput=false;
+                	System.out.println("Exiting to main menu....");
+                	runArcade();
+                	return;
+                }
+                else { //if not 1 or 2
+                    System.out.println("?? Invalid input. Please select 1 or 2");
+                    scanner.nextLine();
+                }
+            }
+            else { //if not an int
+                System.out.println("!! Invalid input. Please select 1 or 2");
+                scanner.nextLine();
+            }
+        }  
+    }  	 	
 }
+    
+
+
+
+
+
+
+
+
