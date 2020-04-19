@@ -5,23 +5,23 @@ import java.util.Scanner;
 public class Position {
 	
 	public static String input;
-	public static int row;
-	public static int col;
+	public static int rowUser;
+	public static int colUser;
 	public static Scanner keyboard = new Scanner(System.in);
 	public static int moves; 
 	
 	
 	public Position(int rowUser, int colUser) {
-		this.row = rowUser;
-		this.col = colUser;
+		this.rowUser = rowUser;
+		this.colUser = colUser;
 	}
 	
 	public int getrowUser() {
-		return row;
+		return rowUser;
 	}
 	
 	public int getcolUser() {
-		return col; 
+		return colUser; 
 	}
 	
 	public static String gatherInput() {
@@ -40,30 +40,25 @@ public class Position {
 	    return null;
 	    }
 	    try {
-	    row = Integer.parseInt(posInput[0])-1;
-	    col = Integer.parseInt(posInput[1])-1;
-	    if(col == 0) {
-	    	col = 2;
+	    rowUser = Integer.parseInt(posInput[0])-1;
+	    colUser = Integer.parseInt(posInput[1])-1;
+	    if(colUser == 0) {
+	    	colUser = 2;
 	    }
-	    else if(col == 2) {
-	    	col = 0;
+	    else if(colUser == 2) {
+	    	colUser = 0;
 	    }
 	    
 	    }catch (NumberFormatException e) {
 	       System.out.println("Fix Format");
 		   return null;
 	    }
-		return new Position(row, col);  	
+		return new Position(rowUser, colUser);  	
 	}
 	
 	public static void userMove() {
+		TicTacToe.board[Position.colUser][Position.rowUser] = 'x';
 	    moves++;
-		TicTacToe.board[Position.col][Position.row] = 'x';
-	}
-	
-	public static void compMove() {
-	    moves++;
-		TicTacToe.board[Position.col][Position.row] = 'o';
 	}
 
 
