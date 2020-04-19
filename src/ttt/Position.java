@@ -1,6 +1,6 @@
 package ttt;
 
-import java.util.Scanner;
+import java.util.Scanner;//edit
 
 public class Position {
 	

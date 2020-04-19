@@ -1,6 +1,6 @@
 package ttt;
 
-import java.util.Scanner;
+import java.util.Scanner;//edit
 
 public class TicTacToe {
 	
@@ -23,7 +23,7 @@ public class TicTacToe {
 	
 	public static void run() {
 		 while(!Check.checkforwin()) { //while no wins have been made
-			 GameBoard.printBoard();
+			 GameBoard.printBoard();//edit
 			 Position.gatherInput();
 			 Position.userMove();
 		
