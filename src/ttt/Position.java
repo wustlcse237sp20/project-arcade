@@ -38,14 +38,15 @@ public class Position {
 	    	gatherInput();
 	    	return null;
 	    }
+	    
 	    try {
 	    rowUser = Integer.parseInt(positionInput[0])-1;
 	    colUser = Integer.parseInt(positionInput[1])-1;
-	    
+	
 	    if(colUser == 0) {colUser = 2;} //prints for ease of viewer
 	    else if(colUser == 2) {colUser = 0;}
-	    
-	    }catch (NumberFormatException e) {
+	    }
+	    catch (NumberFormatException e) { //possible error from converting the string into an int
 	       System.out.println("Fix Format");
 		   return null;
 	    }
