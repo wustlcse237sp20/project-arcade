@@ -10,7 +10,6 @@ public class Position {
 	public static Scanner keyboard = new Scanner(System.in);
 	public static int moves; 
 	
-	
 	public Position(int rowUser, int colUser) {
 		this.rowUser = rowUser;
 		this.colUser = colUser;
