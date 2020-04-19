@@ -22,14 +22,12 @@ public class TicTacToe {
 	}
 	
 	public static void run() {
-		 while(!Check.diagonalWin()) {
+		 while(Check.gameOver()) {
 			 GameBoard.printBoard();
 			 Position.gatherInput();
 			 Position.userMove();
 		 }
 	}
-	
-	
-	
+
 
 }
