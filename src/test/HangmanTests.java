@@ -67,4 +67,22 @@ public class HangmanTests {
         assertFalse(tester.checkForWin(threeChars,fiveLetterWord),"guessing 3/5 letters correctly should not yield a win");
         assertFalse(tester.checkForWin(fourChars,fiveLetterWord),"guessing 4/5 letters correctly should not yield a win");
     }
+    @Test
+    public void easyDifficultyShouldReturnFalse(){
+        Hangman tester = new Hangman();
+        String easyInput = "easy";
+        InputStream userIn = new ByteArrayInputStream(easyInput.getBytes());
+        System.setIn(userIn);
+        boolean difficulty = tester.queryDifficulty();
+        assertFalse(difficulty);
+    }
+    @Test
+    public void hardDifficultyShouldReturnTrue(){
+        Hangman tester = new Hangman();
+        String hardInput = "hard";
+        InputStream userIn = new ByteArrayInputStream(hardInput.getBytes());
+        System.setIn(userIn);
+        boolean difficulty = tester.queryDifficulty();
+        assertTrue(difficulty);
+    }
 }
