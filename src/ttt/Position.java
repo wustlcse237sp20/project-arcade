@@ -34,9 +34,9 @@ public class Position {
 	public static Position gatherProperInput(String input) { //form input into Position objec
 	    String[] positionInput = input.split(",");  //remove comma and feed into string array - pos input 
 	    if (positionInput.length != 2) {
-	    System.out.println("Fix Format");
-	    gatherInput();
-	    return null;
+	    	System.out.println("Fix Format");
+	    	gatherInput();
+	    	return null;
 	    }
 	    try {
 	    rowUser = Integer.parseInt(positionInput[0])-1;

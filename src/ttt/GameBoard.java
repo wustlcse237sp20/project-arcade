@@ -17,7 +17,6 @@ public class GameBoard {
 			}
 			}
 	
-}
-	     
+} 
 		//printing tic tac toe board code from : https://medium.com/@ojusmilindsave/tutorial-to-implement-tic-tac-toe-in-java-ad639661a9b
 	
