@@ -15,14 +15,6 @@ public class Position {
 		Position.colUser = colUser;
 	}
 	
-	public int getrowUser() {
-		return rowUser;
-	}
-	
-	public int getcolUser() {
-		return colUser; 
-	}
-	
 	public static String gatherInput() {  //gathering String input
 		System.out.println("Enter your row col");
 		input = keyboard.next();
