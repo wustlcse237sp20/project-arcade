@@ -42,13 +42,8 @@ public class Position {
 	    try {
 	    rowUser = Integer.parseInt(posInput[0])-1;
 	    colUser = Integer.parseInt(posInput[1])-1;
-	    if(colUser == 0) {
-	    	colUser = 2;
-	    }
-	    else if(colUser == 2) {
-	    	colUser = 0;
-	    }
-	    
+	    if(colUser == 0) {colUser = 2;}
+	    else if(colUser == 2) {colUser = 0;}
 	    }catch (NumberFormatException e) {
 	       System.out.println("Fix Format");
 		   return null;

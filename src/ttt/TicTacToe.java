@@ -18,7 +18,6 @@ public class TicTacToe {
 				board[i][j] = '-';
 			}
 		}
-		
 		 run();
 	}
 	
