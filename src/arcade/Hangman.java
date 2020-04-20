@@ -73,19 +73,19 @@ public class Hangman {
     public static void drawNumWrongGuesses(int numWrong){
         String printable = "";
         if(numWrong == 0) {
-            printable = "\n|====|\n|\n|\n|\n|\n|________\n\n";
+            printable = "\n|========|\n|\n|\n|\n|\n|________\n\n";
         }else if(numWrong == 1){
-            printable = "\n|====|\n|\t @\t\n|\n|\n|\n|_________\n\n";
+            printable = "\n|========|\n|\t @\t\n|\n|\n|\n|_________\n\n";
         }else if(numWrong == 2){
-            printable = "\n|====|\n|\t @\t\n|\t |\n|\n|\n|_________\n\n";
+            printable = "\n|========|\n|\t @\t\n|\t |\n|\n|\n|_________\n\n";
         }else if(numWrong == 3 ){
-            printable = "\n|====|\n|\t @\t\n|\t/|\n|\n|\n|_________\n\n";
+            printable = "\n|========|\n|\t @\t\n|\t/|\n|\n|\n|_________\n\n";
         }else if(numWrong == 4){
-            printable = "\n|====|\n|\t @\t\n|\t/|\\\n|\n|\n|_________\n\n";
+            printable = "\n|========|\n|\t @\t\n|\t/|\\\n|\n|\n|_________\n\n";
         }else if(numWrong == 5){
-            printable = "\n|====|\n|\t @\t\n|\t/|\\\n|\t/ \n|\n|_________\n\n";
+            printable = "\n|========|\n|\t @\t\n|\t/|\\\n|\t/ \n|\n|_________\n\n";
         }else if(numWrong == 6){
-            printable = "\n|====|\n|\t @\t\n|\t/|\\\n|\t/ \\\n|\n|_________\n\n  YOU LOST\n\n";
+            printable = "\n|========|\n|\t @\t\n|\t/|\\\n|\t/ \\\n|\n|_________\n\n  YOU LOST\n\n";
         }
         System.out.print(printable);
     }
