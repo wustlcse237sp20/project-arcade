@@ -12,20 +12,7 @@ public class UI {
 	public static Map<Integer, String> games = new HashMap<Integer, String>();
 	public static int currentGame = 0;
 	
-	
-	public static void populateMap() {
-		games.put(1, "Hangman");
-		games.put(2, "Rock, Paper, Scissors");
-		games.put(3, "Connect4");
-	}
-	
-	//things i've done: 
-	//1: refactor main method into smaller chunks
-	//2: refactor while(badInput) loop to be simplified
-		//didn't need to check twice the value of the input
-		//moved print statements into the runfile method
-	//3: add in Connect 4 gameplay
-		//alter checkForValidInput and  "3"
+	//still to do: exit game functionality
 	
     public static void main(String[] args) {
     	populateMap();
@@ -33,7 +20,16 @@ public class UI {
         runArcade();
         scanner.close();
     }
+    
+    public static void populateMap() {
+		games.put(1, "Hangman");
+		games.put(2, "Rock, Paper, Scissors");
+		games.put(3, "Connect 4");
+	}
 
+    /**
+     * prompts the user for which game they want to play
+     */
 	private static void runArcade() {
 		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n" +
                 "Press 1 for Hangman" + "\n" + "Press 2 for Rock, Paper, Scissors" + "\n" +
