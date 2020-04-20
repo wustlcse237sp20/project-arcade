@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="" />
+=======
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml.orig" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml.orig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/War.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arcade/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/Hangman.java" afterDir="false" />
     </list>
+>>>>>>> hangman
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +46,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Hangman">
-    <configuration name="Hangman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arcade.Hangman" />
+  <component name="RunManager" selected="JUnit.ArcadeTestsComprehensive">
+    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arcade.UI" />
       <module name="Arcade" />
       <extension name="coverage">
         <pattern>
@@ -59,15 +60,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arcade.UI" />
+    <configuration name="ArcadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Arcade" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="arcade.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ArcadeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hangman" />
         <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="JUnit.UITests" />
         <item itemvalue="JUnit.HangmanTests" />
         <item itemvalue="Application.UI" />
+        <item itemvalue="JUnit.ArcadeTest" />
       </list>
     </recent_temporary>
   </component>

@@ -1,15 +1,17 @@
 package test;
-import arcade.Hangman;
 
+import arcade.Hangman;
+import arcade.RPS;
+import arcade.UI;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-public class HangmanTests {
+public class ArcadeTestsComprehensive {
     @Test
     public void selectingEasyGameShouldReturnFalse(){
         Hangman tester = new Hangman();
@@ -85,4 +87,94 @@ public class HangmanTests {
         boolean difficulty = tester.queryDifficulty();
         assertTrue(difficulty);
     }
+    @org.junit.jupiter.api.Test
+    public void choiceRTest() {
+        String result = RPS.choiceR("r");
+        if(RPS.rock==RPS.comp) {
+            assertEquals("Computer entered Rock \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)",result);
+        }
+        else if(RPS.comp==2) {
+            assertEquals("Computer entered Paper \nYou loose",result);
+        }
+        else {
+            assertEquals("Computer entered scissors \nYou win",result);
+        }
+    }
+
+    @org.junit.jupiter.api.Test
+    public void choicePTest() {
+        String result = RPS.choiceP("p");
+        if(RPS.paper==RPS.comp) {
+            assertEquals("Computer entered paper \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)",result);
+        }
+        else if(RPS.comp==1) {
+            assertEquals("Computer entered Rock \nYou Win",result);
+        }
+        else {
+            assertEquals("Computer entered scissors \nYou lose",result);
+        }
+    }
+
+    @org.junit.jupiter.api.Test
+    public void choicSTest() {
+        String result = RPS.choiceS("s");
+        if(RPS.scissors==RPS.comp) {
+            assertEquals("Computer entered scissors \nTie \nPlease choose your object again (Rock-r, Paper-s, Scissors-s)",result);
+        }
+        else if(RPS.comp==1) {
+            assertEquals("Computer entered Rock \nYou loose",result);
+        }
+        else {
+            assertEquals("Computer entered paper \nYou win",result);
+        }
+    }
+    @org.junit.jupiter.api.Test
+    public void illegalInputShouldReturnFalse() {
+        int illegalInput = 4;
+        UI test = new UI();
+        boolean testIllegal = test.checkForValidInput(illegalInput);
+        assertFalse(testIllegal);
+    }
+
+    @org.junit.jupiter.api.Test
+    void legalInput1ShouldReturnTrue() {
+        int legalInput1 = 1;
+        UI test = new UI();
+        boolean testlegalInput1 = test.checkForValidInput(legalInput1);
+        assertTrue(testlegalInput1);
+    }
+
+    @org.junit.jupiter.api.Test
+    void legalInput2ShouldReturnTrue() {
+        int legalInput2 = 2;
+        UI test = new UI();
+        boolean testlegalInput2 = test.checkForValidInput(legalInput2);
+        assertTrue(testlegalInput2);
+    }
+
+    @org.junit.jupiter.api.Test
+    void legalInput3ShouldReturnTrue() {
+        int legalInput3 = 3;
+        UI test = new UI();
+        boolean testlegalInput3 = test.checkForValidInput(legalInput3);
+        assertTrue(testlegalInput3);
+    }
+
+    @org.junit.jupiter.api.Test
+    void illegalRunFileShouldReturnFalse() {
+        int illegalInput = 4;
+        UI test = new UI();
+        boolean testIllegal = test.runFile(illegalInput);
+        assertFalse(testIllegal);
+    }
+    @org.junit.jupiter.api.Test
+    void populateMapShouldPopulateThreeGames(){
+        UI test = new UI();
+        test.populateMap();
+        int mapSize = test.games.size();
+        assertEquals(3,mapSize);
+        assertNotEquals(4,mapSize);
+
+    }
+
 }
