@@ -64,7 +64,6 @@ public class UITests {
      * respective games is tested within the specific game test classes.
      */
 
-//
 //    @Test
 //    void runHangmanChecker() {
 //        int runHangman = 1;

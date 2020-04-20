@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Arcade/test/ArcadeTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/ArcadeTestsComprehensive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/Connect4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/Connect4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Arcade/test/UITests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/test/UITests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/UITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UITests.java" afterDir="false" />
     </list>
@@ -45,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UITests">
+  <component name="RunManager" selected="JUnit.ArcadeTestsComprehensive">
     <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arcade.UI" />
       <module name="Arcade" />
@@ -74,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArcadeTest.choiceRTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArcadeTestsComprehensive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Arcade" />
       <extension name="coverage">
         <pattern>
@@ -83,9 +83,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ArcadeTest" />
-      <option name="METHOD_NAME" value="choiceRTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="test.ArcadeTestsComprehensive" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="JUnit.UITests" />
         <item itemvalue="JUnit.HangmanTests" />
         <item itemvalue="Application.UI" />
         <item itemvalue="JUnit.ArcadeTest" />
-        <item itemvalue="JUnit.ArcadeTest.choiceRTest" />
       </list>
     </recent_temporary>
   </component>
