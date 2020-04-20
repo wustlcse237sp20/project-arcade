@@ -114,25 +114,16 @@ public class Hangman {
         int numWrongGuesses = 0;
         int numGuessedRight = 0;
         String word = generateWord();
-  
         char[] solution = word.toCharArray();
         char[] progress = new char[solution.length];
         drawNumWrongGuesses(numWrongGuesses);
-        System.out.print("Guess: ");
-        for (int i = 0; i < solution.length; i++) {
-            System.out.print("_ ");
-        }
+        drawBlanks(solution);
         System.out.println();
         while(numWrongGuesses < 6 && !isWon) {
             boolean goodGuess = false;
             char guess = queryUserGuess();
             // check to see if the user already guessed the letter.
-            for(int i = 0; i < progress.length;i++){
-                if(guess == progress[i]){
-                    System.out.println("You already used this letter.");
-                    continue;
-                }
-            }
+            checkAlreadyUsed(progress, guess);
             //check to see if the user guessed a correct letter
             for (int i = 0; i < solution.length; i++) {
                 if (guess == solution[i]) {
@@ -149,6 +140,32 @@ public class Hangman {
             printProgress(progress);
             //check if the user won
             isWon = checkForWin(numGuessedRight, solution);
+        }
+    }
+    /**
+     * Draws UI blanks
+     * @param char[] the letters in the solution
+     * @return void
+     */
+    public static void drawBlanks(char[] solution) {
+        System.out.print("Guess: ");
+        for (int i = 0; i < solution.length; i++) {
+            System.out.print("_ ");
+        }
+    }
+
+    /**
+     * Checks if the letter is already present in the solution
+     * @param char[] the letters already guessed in the solution
+     * @param char the current guess
+     * @return void
+     */
+    public static void checkAlreadyUsed(char[] progress, char guess) {
+        for(int i = 0; i < progress.length;i++){
+            if(guess == progress[i]){
+                System.out.println("You already used this letter.");
+                continue;
+            }
         }
     }
 
