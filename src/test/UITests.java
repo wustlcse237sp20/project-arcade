@@ -9,9 +9,9 @@ public class UITests {
 
     @Test
     public void illegalInputChecker() {
-        int illegalInput = 3;
+        int illegalInput = 4;
         UI test = new UI();
-        boolean testIllegal = test.validInput(illegalInput);
+        boolean testIllegal = test.checkForValidInput(illegalInput);
         assertFalse(testIllegal);
     }
 
@@ -19,7 +19,7 @@ public class UITests {
     void legalInput1Checker() {
         int legalInput1 = 1;
         UI test = new UI();
-        boolean testlegalInput1 = test.validInput(legalInput1);
+        boolean testlegalInput1 = test.checkForValidInput(legalInput1);
         assertTrue(testlegalInput1);
     }
 
@@ -27,15 +27,23 @@ public class UITests {
     void legalInput2Checker() {
         int legalInput2 = 2;
         UI test = new UI();
-        boolean testlegalInput2 = test.validInput(legalInput2);
+        boolean testlegalInput2 = test.checkForValidInput(legalInput2);
         assertTrue(testlegalInput2);
     }
+    
+    @Test
+    void legalInput3Checker() {
+        int legalInput3 = 3;
+        UI test = new UI();
+        boolean testlegalInput3 = test.checkForValidInput(legalInput3);
+        assertTrue(testlegalInput3);
+    }    
 
     @Test
     void illegalRunFileChecker() {
-        int illegalInput = 3;
+        int illegalInput = 4;
         UI test = new UI();
-        boolean testIllegal = test.runfile(illegalInput);
+        boolean testIllegal = test.runFile(illegalInput);
         assertFalse(testIllegal);
     }
 
@@ -43,7 +51,7 @@ public class UITests {
     void runHangmanChecker() {
         int runHangman = 1;
         UI test = new UI();
-        boolean testRunHangman = test.runfile(runHangman);
+        boolean testRunHangman = test.runFile(runHangman);
         assertTrue(testRunHangman);
     }
 
@@ -51,7 +59,15 @@ public class UITests {
     void runRockPaperScissorsChecker() {
         int runRPS = 2;
         UI test = new UI();
-        boolean testRunRPS = test.runfile(runRPS);
+        boolean testRunRPS = test.runFile(runRPS);
         assertTrue(testRunRPS);
+    }
+    
+    @Test
+    void runConnect4Checker() {
+        int runConnect4 = 3;
+        UI test = new UI();
+        boolean testRunConnect4 = test.runFile(runConnect4);
+        assertTrue(testRunConnect4);
     }
 }
