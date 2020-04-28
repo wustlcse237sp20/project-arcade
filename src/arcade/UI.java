@@ -33,7 +33,7 @@ public class UI {
      * prompts the user for which game they want to play
      */
 	private static void runArcade() {
-		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n" +
+		System.out.println("Select which game you would like to play" + "\n" +
                 "Press 1 for Hangman" + "\n" + "Press 2 for Rock, Paper, Scissors" + "\n" +
                 "Press 3 for Connect 4");
         boolean badInput = true;
@@ -117,8 +117,8 @@ public class UI {
 		if(currentGameWasWon) {
 			gamesWon = gamesWon + 1;
 		}
-		System.out.println("\nGames played: " + gamesPlayed);
-		System.out.println("Games won: " + gamesWon);
+		System.out.println("\nGames won: " + gamesWon);
+		System.out.println("Games played: " + gamesPlayed);
 		double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
 		System.out.println("Win rate: " + winRate + "%\n");
 		
@@ -129,7 +129,7 @@ public class UI {
      * allows the user to continue playing
      */
     public static void playAgain() {
-    	System.out.println("Press 1 to play " + games.get(currentGame) + " again. Press 2 to exit to main menu");
+    	System.out.println("Press 1 to play " + games.get(currentGame) + " again\nPress 2 to exit to main menu\nPress 3 to exit the arcade");
     	boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
@@ -141,11 +141,17 @@ public class UI {
                 }
                 if(input == 2) {
                 	badInput=false;
-                	System.out.println("Exiting to main menu....");
+                	System.out.println("Exiting to main menu...\n");
                 	runArcade();
                 	return;
                 }
-                else { //if not 1 or 2
+                if(input ==3) {
+                	badInput=false;
+                	System.out.println("Exiting the arcade... Thanks for playing!");
+                	System.exit(0);
+                	return;
+                }
+                else { //if not 1 or 2 or 3
                     System.out.println("Invalid input. Please select 1 or 2");
                     scanner.nextLine();
                 }
