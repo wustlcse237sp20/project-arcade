@@ -11,6 +11,8 @@ public class UI {
     public static Scanner scanner = new Scanner(System.in);
 	public static Map<Integer, String> games = new HashMap<Integer, String>();
 	public static int currentGame = 0;
+	public static int gamesPlayed = 0;
+	public static int gamesWon = 0;
 	
 	//still to do: exit game functionality
 	
@@ -54,7 +56,7 @@ public class UI {
             }
         }
 	}
-
+		
     /**
      * returns true once the input is 1, 2, or 3
      * @param input 
@@ -81,27 +83,46 @@ public class UI {
      * @return
      */
     public static boolean runFile(int input) {
+    	boolean currentGameWasWon = false;
         if (input == 1) {
         	System.out.println("Entering Hangman...");
             Hangman.playHangman();
+            if(Hangman.uiCheckWinStatus()) {currentGameWasWon = true;}
+            updateGameStats(currentGameWasWon);
             playAgain();
             return true;
         }
         else if (input == 2) {
         	System.out.println("Entering Rock, Paper, Scissors...");
             RPS.main();
+            if(RPS.uiCheckWinStatus()) {currentGameWasWon = true;}
+            updateGameStats(currentGameWasWon);
             playAgain();
             return true;
         }
         else if(input == 3) {
         	System.out.println("Entering Connect 4...");
         	Connect4.main();
+            if(Connect4.uiCheckWinStatus()) {currentGameWasWon = true;}
+        	updateGameStats(currentGameWasWon);
             playAgain();
         	return true;
         }
         return false;
-  
     }
+    
+	//after the game plays, it prints out the stats 
+	public static void updateGameStats(boolean currentGameWasWon) {
+		gamesPlayed = gamesPlayed +1;
+		if(currentGameWasWon) {
+			gamesWon = gamesWon + 1;
+		}
+		System.out.println("\nGames played: " + gamesPlayed);
+		System.out.println("Games won: " + gamesWon);
+		double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
+		System.out.println("Win rate: " + winRate + "%\n");
+		
+	}
 
     
     /**
@@ -125,16 +146,16 @@ public class UI {
                 	return;
                 }
                 else { //if not 1 or 2
-                    System.out.println("?? Invalid input. Please select 1 or 2");
+                    System.out.println("Invalid input. Please select 1 or 2");
                     scanner.nextLine();
                 }
             }
             else { //if not an int
-                System.out.println("!! Invalid input. Please select 1 or 2");
+                System.out.println("Invalid input. Please select 1 or 2");
                 scanner.nextLine();
             }
         }  
-    }  	 	
+    }  	 
 }
     
 

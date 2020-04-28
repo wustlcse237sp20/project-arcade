@@ -12,16 +12,18 @@ public class RPS {
     public static int rock = 1;
     public static int paper = 2;
     public static int scissors = 3;
+	public static boolean uiWinStatus = false;
+
 
     public static void main(){
+    	uiWinStatus=false;
         System.out.println("Welcome to the game of rock paper scissors"); //initial print messages 
-        System.out.println("Please choose your object (Rock-r, Paper-s, Scissors-s)");
+        System.out.println("Please choose your object (Rock-r, Paper-p, Scissors-s)");
         check(); 
-    }
-
+    }   
     
     /**
-     * Checks the user input as a string value for corectness  
+     * Checks the user input as a string value for correctness  
      */
     public static void check(){
         comp = (int)(Math.random() * ((3 - 1) + 1)) + 1; //generates a random value from the range 1-3 as an int
@@ -57,10 +59,12 @@ public class RPS {
             else if(comp==2) {
                 valueRetun = "Computer entered Paper \nYou lose";
                 System.out.println(valueRetun);
+                uiWinStatus=false;
             }
             else{
                 valueRetun = "Computer entered scissors \nYou win";
                 System.out.println(valueRetun);
+                uiWinStatus=true;
             }
         }
         return valueRetun; //print message 
@@ -82,10 +86,12 @@ public class RPS {
             else if(comp==1) {
                 valueRetun="Computer entered Rock \nYou Win";
                 System.out.println(valueRetun);
+                uiWinStatus=true;
             }
             else{
                 valueRetun="Computer entered scissors \nYou lose";
                 System.out.println(valueRetun);
+                uiWinStatus=false;
             }
         }
 
@@ -108,15 +114,19 @@ public class RPS {
             else if(comp==1) {
                 valueRetun="Computer entered Rock \nYou lose";
                 System.out.println(valueRetun);
+                uiWinStatus=false;
             }
             else {
                 valueRetun="Computer entered paper \nYou win";
                 System.out.println(valueRetun);
+                uiWinStatus=true;
             }
         }
         return valueRetun; //print message 
     }
 
-
+    public static boolean uiCheckWinStatus() {
+		return uiWinStatus;
+    } 
 
 }
