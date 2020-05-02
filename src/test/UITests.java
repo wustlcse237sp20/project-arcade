@@ -59,6 +59,30 @@ public class UITests {
 
     }
 
+
+
+
+    /**
+     * Testing loss of game multiple times increment gamesPlayed but not gamesWon
+     *
+     */
+
+    @Test
+    void losingAndWinningGameShouldIncrementGamesPlayedAndGamesWonAppropriately(){
+        UI test = new UI();
+        assertEquals(0,test.gamesPlayed);
+        assertEquals(0,test.gamesWon);
+        test.updateGameStats(false);
+        assertEquals(1,test.gamesPlayed);
+        assertEquals(0,test.gamesWon);
+        test.updateGameStats(false);
+        assertEquals(2,test.gamesPlayed);
+        assertEquals(0,test.gamesWon);
+        test.updateGameStats(true);
+        assertEquals(3,test.gamesPlayed);
+        assertEquals(1,test.gamesWon);
+    }
+
     /**
      * Testing population of game map and proper handing of input selection renders the following tests obsolete. Successful run of
      * respective games is tested within the specific game test classes.

@@ -112,7 +112,7 @@ public class UI {
     
 	//after the game plays, it prints out the stats 
 	public static void updateGameStats(boolean currentGameWasWon) {
-		gamesPlayed = gamesPlayed +1;
+		gamesPlayed = gamesPlayed+1;
 		if(currentGameWasWon) {
 			gamesWon = gamesWon + 1;
 		}
