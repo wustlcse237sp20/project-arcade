@@ -138,7 +138,7 @@ public class UI {
     public static void drawArcadeVisual(){
         System.out.println("===================================================================================");
         System.out.println("");
-        System.out.println("      __         _______         ______        __        ________      _________  ");
+        System.out.println("      __         _______        ______         __        ________      _________  ");
         System.out.println("     /  \\       |_   __ \\     .' ___  |       /  \\      |_   ___ `.   |_   ___  | ");
         System.out.println("    / /\\ \\       | |__) |    / .'   \\_|      / /\\ \\       | |   `. \\    | |_  \\_| ");
         System.out.println("   / ____ \\      |  __ /     | |            / ____ \\      | |    | |    |  _|  _  ");
