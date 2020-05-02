@@ -17,6 +17,7 @@ public class UI {
     public static void main(String[] args) {
     	populateMap();
     	System.out.println("Welcome to the Java Arcade!");
+    	drawArcadeVisual();
         runArcade();
         scanner.close();
     }
@@ -31,9 +32,7 @@ public class UI {
      * prompts the user for which game they want to play
      */
 	private static void runArcade() {
-		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n" +
-                "Press 1 for Hangman" + "\n" + "Press 2 for Rock, Paper, Scissors" + "\n" +
-                "Press 3 for Connect 4");
+		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n");
         boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
@@ -134,7 +133,31 @@ public class UI {
                 scanner.nextLine();
             }
         }  
-    }  	 	
+    }
+
+    public static void drawArcadeVisual(){
+        System.out.println("==================================================================");
+        System.out.println("");
+        System.out.println("                           ,~~~,");
+        System.out.println("                           `~~~`               +--+--+--+--+-+                  ");
+        System.out.println("  |----+                                       |o            |       ");
+        System.out.println("  |    |                   +---+               |   o         | ");
+        System.out.println("  |  {X_X}                 |   |               |      o      |        ");
+        System.out.println("  |   /|\\                  +---+               |         o   |        ");
+        System.out.println("  |   / \\                                      |             |     ");
+        System.out.println("  |                         Q O               =|=============|=                  ");
+        System.out.println("  |_______                   X                 |             |               ");
+        System.out.println("                            / \\                          ");
+        System.out.println("") ;
+        System.out.println("                           _____                   ______        ");
+        System.out.println("    /  |                  / ___ `.                / ____ `.");
+        System.out.println("    `| |                 |_/___) |                `'  __) |             ");
+        System.out.println("     | |                  .'____.'                _  |__ '.           ");
+        System.out.println("     | |                 / /____                 | \\____) |                   ");
+        System.out.println("   |_____|               |_______|                \\______.'                ");
+        System.out.println("            ");
+        System.out.println("==================================================================");
+    }
 }
     
 
