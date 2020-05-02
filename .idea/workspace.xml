@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Hangman_Tests_Run_Instructions.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml.orig" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml.orig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/War.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arcade/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/Hangman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arcade/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/UI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +33,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="extract.method.default.visibility" value="public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -45,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Hangman">
+  <component name="RunManager" selected="Application.UI">
     <configuration name="Hangman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arcade.Hangman" />
       <module name="Arcade" />
@@ -119,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UI" />
         <item itemvalue="Application.Hangman" />
         <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="JUnit.UITests" />
         <item itemvalue="JUnit.HangmanTests" />
-        <item itemvalue="Application.UI" />
       </list>
     </recent_temporary>
   </component>
