@@ -136,27 +136,36 @@ public class UI {
     }
 
     public static void drawArcadeVisual(){
-        System.out.println("==================================================================");
+        System.out.println("===================================================================================");
         System.out.println("");
-        System.out.println("                           ,~~~,");
-        System.out.println("                           `~~~`               +--+--+--+--+-+                  ");
-        System.out.println("  |----+                                       |o            |       ");
-        System.out.println("  |    |                   +---+               |   o         | ");
-        System.out.println("  |  {X_X}                 |   |               |      o      |        ");
-        System.out.println("  |   /|\\                  +---+               |         o   |        ");
-        System.out.println("  |   / \\                                      |             |     ");
-        System.out.println("  |                         Q O               =|=============|=                  ");
-        System.out.println("  |_______                   X                 |             |               ");
-        System.out.println("                            / \\                          ");
+        System.out.println("      __         _______         ______        __        ________      _________  ");
+        System.out.println("     /  \\       |_   __ \\     .' ___  |       /  \\      |_   ___ `.   |_   ___  | ");
+        System.out.println("    / /\\ \\       | |__) |    / .'   \\_|      / /\\ \\       | |   `. \\    | |_  \\_| ");
+        System.out.println("   / ____ \\      |  __ /     | |            / ____ \\      | |    | |    |  _|  _  ");
+        System.out.println(" _/ /    \\ \\_   _| |  \\ \\_   \\ `.___.'\\   _/ /    \\ \\_   _| |___.' /   _| |___/ |");
+        System.out.println("|____|  |____| |____| |___|   `._____.'  |____|  |____| |________.'   |_________|  ");
+        System.out.println("                                                                                    ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("                                  ,~~~,");
+        System.out.println("                                  `~~~`                      +--+--+--+--+-+                  ");
+        System.out.println("  |----+                                                     |o            |       ");
+        System.out.println("  |    |                          +---+                      |   o         | ");
+        System.out.println("  |  {X_X}                        |   |                      |      o      |        ");
+        System.out.println("  |   /|\\                         +---+                      |         o   |        ");
+        System.out.println("  |   / \\                                                    |             |     ");
+        System.out.println("  |                                Q O                      =|=============|=                  ");
+        System.out.println("  |_______                          X                        |             |               ");
+        System.out.println("                                   / \\                          ");
         System.out.println("") ;
-        System.out.println("                           _____                   ______        ");
-        System.out.println("    /  |                  / ___ `.                / ____ `.");
-        System.out.println("    `| |                 |_/___) |                `'  __) |             ");
-        System.out.println("     | |                  .'____.'                _  |__ '.           ");
-        System.out.println("     | |                 / /____                 | \\____) |                   ");
-        System.out.println("   |_____|               |_______|                \\______.'                ");
+        System.out.println("                                  _____                          ______        ");
+        System.out.println("    /  |                         / ___ `.                       / ____ `.");
+        System.out.println("    `| |                        |_/___) |                       `'  __) |             ");
+        System.out.println("     | |                         .'____.'                       _  |__ '.           ");
+        System.out.println("     | |                        / /____                        | \\____) |                   ");
+        System.out.println("   |_____|                      |_______|                       \\______.'                ");
         System.out.println("            ");
-        System.out.println("==================================================================");
+        System.out.println("=================================================================================");
     }
 }
     

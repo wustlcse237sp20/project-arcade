@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/Hangman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arcade/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/UI.java" afterDir="false" />
     </list>
