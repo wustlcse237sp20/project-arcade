@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Hangman {
 	
+	public static boolean uiWinStatus = false;
+	
     /**
      * The function asks the user for the difficulty (easy, hard) 
      * @return boolean false if user entered easy, boolean true if user entered hard
@@ -105,11 +107,13 @@ public class Hangman {
         return false;
     }
 
+
     
     /**
      * Main game functionality 
      */
     public static void playHangman() {
+    	uiWinStatus = false;
         boolean isWon = false;
         int numWrongGuesses = 0;
         int numGuessedRight = 0;
@@ -141,6 +145,7 @@ public class Hangman {
             //check if the user won
             isWon = checkForWin(numGuessedRight, solution);
         }
+        uiWinStatus=isWon;
     }
     /**
      * Draws UI blanks
@@ -171,5 +176,9 @@ public class Hangman {
 
     public static void main(String[] args) {
         playHangman();
+    }
+    
+    public static boolean uiCheckWinStatus() {
+		return uiWinStatus;
     }
 }

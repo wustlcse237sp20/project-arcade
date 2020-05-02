@@ -11,6 +11,8 @@ public class UI {
     public static Scanner scanner = new Scanner(System.in);
 	public static Map<Integer, String> games = new HashMap<Integer, String>();
 	public static int currentGame = 0;
+	public static int gamesPlayed = 0;
+	public static int gamesWon = 0;
 	
 	//still to do: exit game functionality
 	
@@ -53,7 +55,7 @@ public class UI {
             }
         }
 	}
-
+		
     /**
      * returns true once the input is 1, 2, or 3
      * @param input 
@@ -80,34 +82,53 @@ public class UI {
      * @return
      */
     public static boolean runFile(int input) {
+    	boolean currentGameWasWon = false;
         if (input == 1) {
         	System.out.println("Entering Hangman...");
             Hangman.playHangman();
+            if(Hangman.uiCheckWinStatus()) {currentGameWasWon = true;}
+            updateGameStats(currentGameWasWon);
             playAgain();
             return true;
         }
         else if (input == 2) {
         	System.out.println("Entering Rock, Paper, Scissors...");
             RPS.main();
+            if(RPS.uiCheckWinStatus()) {currentGameWasWon = true;}
+            updateGameStats(currentGameWasWon);
             playAgain();
             return true;
         }
         else if(input == 3) {
         	System.out.println("Entering Connect 4...");
         	Connect4.main();
+            if(Connect4.uiCheckWinStatus()) {currentGameWasWon = true;}
+        	updateGameStats(currentGameWasWon);
             playAgain();
         	return true;
         }
         return false;
-  
     }
+    
+	//after the game plays, it prints out the stats 
+	public static void updateGameStats(boolean currentGameWasWon) {
+		gamesPlayed = gamesPlayed+1;
+		if(currentGameWasWon) {
+			gamesWon = gamesWon + 1;
+		}
+		System.out.println("\nGames won: " + gamesWon);
+		System.out.println("Games played: " + gamesPlayed);
+		double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
+		System.out.println("Win rate: " + winRate + "%\n");
+		
+	}
 
     
     /**
      * allows the user to continue playing
      */
     public static void playAgain() {
-    	System.out.println("Press 1 to play " + games.get(currentGame) + " again. Press 2 to exit to main menu");
+    	System.out.println("Press 1 to play " + games.get(currentGame) + " again\nPress 2 to exit to main menu\nPress 3 to exit the arcade");
     	boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
@@ -119,17 +140,23 @@ public class UI {
                 }
                 if(input == 2) {
                 	badInput=false;
-                	System.out.println("Exiting to main menu....");
+                	System.out.println("Exiting to main menu...\n");
                 	runArcade();
                 	return;
                 }
-                else { //if not 1 or 2
-                    System.out.println("?? Invalid input. Please select 1 or 2");
+                if(input ==3) {
+                	badInput=false;
+                	System.out.println("Exiting the arcade... Thanks for playing!");
+                	System.exit(0);
+                	return;
+                }
+                else { //if not 1 or 2 or 3
+                    System.out.println("Invalid input. Please select 1 or 2");
                     scanner.nextLine();
                 }
             }
             else { //if not an int
-                System.out.println("!! Invalid input. Please select 1 or 2");
+                System.out.println("Invalid input. Please select 1 or 2");
                 scanner.nextLine();
             }
         }  
@@ -147,14 +174,14 @@ public class UI {
         System.out.println("                                                                                    ");
         System.out.println("");
         System.out.println("");
-        System.out.println("                         ,~~~,");
-        System.out.println("                         `~~~`             +--+--+--+--+-+                         ");
-        System.out.println("  |----+                                   |o            |       \\/  |     |                   ");
-        System.out.println("  |    |                 +---+             |   o         |      _/\\__|_____|_____    ");
-        System.out.println("  |  {X_X}               |   |             |      o      |           |/```\\|   ");
-        System.out.println("  |   /|\\                +---+             |         o   |      _____|\\___/|_____   ");
-        System.out.println("  |   / \\                                  |             |           |     | \\/      ");
-        System.out.println("  |                       Q O             =|=============|=          |     | /\\ ");
+        System.out.println("                         ,~~~,                                                                  ");
+        System.out.println("                         `~~~`             +--+--+--+--+-+                                       ");
+        System.out.println("  |----+                                   |o            |       /``  /``\\  |  |\\ |   ");
+        System.out.println("  |    |                 +---+             |   o         |       \\..  \\__/  |  | \\|        ");
+        System.out.println("  |  {X_X}               |   |             |      o      |                         ");
+        System.out.println("  |   /|\\                +---+             |         o   |       __.__             ");
+        System.out.println("  |   / \\                                  |             |         |   /``\\  <`` <``        ");
+        System.out.println("  |                       Q O             =|=============|=        |   \\../  _`> _`>  ");
         System.out.println("  |_______                 X               |             |                        ");
         System.out.println("                          / \\                                                     ");
         System.out.println("") ;
@@ -162,8 +189,8 @@ public class UI {
         System.out.println("    /  |                / ___ `.              / ____ `.           |  |   |  |        ");
         System.out.println("    `| |               |_/___) |              `'  __) |           |  |___|  |__       ");
         System.out.println("     | |                .'____.'              _  |__ '.           |______    __|  ");
-        System.out.println("     | |               / /_____              | \\____) |                 |  |   ");
-        System.out.println("   |_____|             |_______|              \\______.'                 |__|       ");
+        System.out.println("     | |               / /_____              | \\____) |                  |  |   ");
+        System.out.println("   |_____|             |_______|              \\______.'                  |__|       ");
         System.out.println("            ");
         System.out.println("=================================================================================");
     }
