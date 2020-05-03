@@ -27,7 +27,7 @@ public class UI {
     public static void populateMap() {
 		games.put(1, "Hangman");
 		games.put(2, "Rock, Paper, Scissors");
-		games.put(3, "Connect 4");
+		games.put(3, "Coin Toss");
 	}
 
     /**
@@ -100,9 +100,9 @@ public class UI {
             return true;
         }
         else if(input == 3) {
-        	System.out.println("Entering Connect 4...");
-        	Connect4.main();
-            if(Connect4.uiCheckWinStatus()) {currentGameWasWon = true;}
+        	System.out.println("Entering Coin Toss...");
+        //	CoinToss.main();
+        //    if(CoinToss.uiCheckWinStatus()) {currentGameWasWon = true;}
         	updateGameStats(currentGameWasWon);
             playAgain();
         	return true;
@@ -174,23 +174,23 @@ public class UI {
         System.out.println("                                                                                    ");
         System.out.println("");
         System.out.println("");
-        System.out.println("                         ,~~~,                                                                  ");
-        System.out.println("                         `~~~`             +--+--+--+--+-+                                       ");
-        System.out.println("  |----+                                   |o            |       /``  /``\\  |  |\\ |   ");
-        System.out.println("  |    |                 +---+             |   o         |       \\..  \\__/  |  | \\|        ");
-        System.out.println("  |  {X_X}               |   |             |      o      |                         ");
-        System.out.println("  |   /|\\                +---+             |         o   |       __.__             ");
-        System.out.println("  |   / \\                                  |             |         |   /``\\  <`` <``        ");
-        System.out.println("  |                       Q O             =|=============|=        |   \\../  _`> _`>  ");
-        System.out.println("  |_______                 X               |             |                        ");
-        System.out.println("                          / \\                                                     ");
+        System.out.println("                                   ,~~~,                                                                 ");
+        System.out.println("                                   `~~~`                                                  ");
+        System.out.println("     |----+                                               /``  /``\\  |  |\\ |   ");
+        System.out.println("     |    |                        +---+                  \\..  \\__/  |  | \\|        ");
+        System.out.println("     |  {X_X}                      |   |                                    ");
+        System.out.println("     |   /|\\                       +---+                 __.__             ");
+        System.out.println("     |   / \\                                               |   /``\\  <`` <``        ");
+        System.out.println("     |                              Q O                    |   \\../  _`> _`>  ");
+        System.out.println("     |_______                        X                                    ");
+        System.out.println("                                    / \\                                                    ");
         System.out.println("") ;
-        System.out.println("     __                  _____                 ______              __     __       ");
-        System.out.println("    /  |                / ___ `.              / ____ `.           |  |   |  |        ");
-        System.out.println("    `| |               |_/___) |              `'  __) |           |  |___|  |__       ");
-        System.out.println("     | |                .'____.'              _  |__ '.           |______    __|  ");
-        System.out.println("     | |               / /_____              | \\____) |                  |  |   ");
-        System.out.println("   |_____|             |_______|              \\______.'                  |__|       ");
+        System.out.println("        __                         _____                      ______              ");
+        System.out.println("       /  |                       / ___ `.                   / ____ `.        ");
+        System.out.println("       `| |                      |_/___) |                   `'  __) |            ");
+        System.out.println("        | |                       .'____.'                   _  |__ '.         ");
+        System.out.println("        | |                      / /_____                   | \\____) |          ");
+        System.out.println("      |_____|                    |_______|                   \\______.'             ");
         System.out.println("            ");
         System.out.println("=================================================================================");
     }
