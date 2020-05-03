@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/arcade/CoinToss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CoinTossTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/Connect4.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/arcade/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arcade/test/ArcadeTestsComprehensive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/test/ArcadeTestsComprehensive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arcade/test/UITests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arcade/test/UITests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arcade/Connect4.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arcade/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ArcadeTestsComprehensive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ArcadeTestsComprehensive.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UI">
+  <component name="RunManager" selected="JUnit.ArcadeTestsComprehensive">
     <configuration name="Hangman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arcade.Hangman" />
       <module name="Arcade" />
@@ -87,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HangmanTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CoinTossTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Arcade" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +103,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.HangmanTests" />
+      <option name="MAIN_CLASS_NAME" value="test.CoinTossTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="Application.UI" />
+        <item itemvalue="JUnit.CoinTossTests" />
         <item itemvalue="JUnit.UITests" />
         <item itemvalue="Application.Hangman" />
-        <item itemvalue="JUnit.ArcadeTestsComprehensive" />
-        <item itemvalue="JUnit.HangmanTests" />
       </list>
     </recent_temporary>
   </component>

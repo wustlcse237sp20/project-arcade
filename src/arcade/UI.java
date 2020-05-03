@@ -1,48 +1,49 @@
 package arcade;
 import arcade.Hangman;
 import arcade.RPS;
+import arcade.CoinToss;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class UI {
-	
+
     public static Scanner scanner = new Scanner(System.in);
-	public static Map<Integer, String> games = new HashMap<Integer, String>();
-	public static int currentGame = 0;
-	public static int gamesPlayed = 0;
-	public static int gamesWon = 0;
-	
-	//still to do: exit game functionality
-	
+    public static Map<Integer, String> games = new HashMap<Integer, String>();
+    public static int currentGame = 0;
+    public static int gamesPlayed = 0;
+    public static int gamesWon = 0;
+
+    //still to do: exit game functionality
+
     public static void main(String[] args) {
-    	populateMap();
-    	System.out.println("Welcome to the Java Arcade!");
-    	drawArcadeVisual();
+        populateMap();
+        System.out.println("Welcome to the Java Arcade!");
+        drawArcadeVisual();
         runArcade();
         scanner.close();
     }
-    
+
     public static void populateMap() {
-		games.put(1, "Hangman");
-		games.put(2, "Rock, Paper, Scissors");
-		games.put(3, "Coin Toss");
-	}
+        games.put(1, "Hangman");
+        games.put(2, "Rock, Paper, Scissors");
+        games.put(3, "Coin Toss");
+    }
 
     /**
      * prompts the user for which game they want to play
      */
-	private static void runArcade() {
-		System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n");
+    private static void runArcade() {
+        System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n");
         boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
                 int input = scanner.nextInt();
                 if(checkForValidInput(input)) {
-                	badInput=false;
-                	updateCurrentGame(input);
-                	runFile(input);
+                    badInput=false;
+                    updateCurrentGame(input);
+                    runFile(input);
                 }
                 else { //if not 1, 2 or 3
                     System.out.println("Invalid input. Please select 1, 2, or 3");
@@ -54,11 +55,11 @@ public class UI {
                 scanner.nextLine();
             }
         }
-	}
-		
+    }
+
     /**
      * returns true once the input is 1, 2, or 3
-     * @param input 
+     * @param input
      * @return
      */
     public static boolean checkForValidInput(int input) {
@@ -72,19 +73,19 @@ public class UI {
      * changes the value of currentGame to reflect most recently selected game
      * @param input
      */
-	public static void updateCurrentGame(int input) {
-		currentGame = input;
-	}
-    
+    public static void updateCurrentGame(int input) {
+        currentGame = input;
+    }
+
     /**
      * runs the selected game, should always return true
      * @param input
      * @return
      */
     public static boolean runFile(int input) {
-    	boolean currentGameWasWon = false;
+        boolean currentGameWasWon = false;
         if (input == 1) {
-        	System.out.println("Entering Hangman...");
+            System.out.println("Entering Hangman...");
             Hangman.playHangman();
             if(Hangman.uiCheckWinStatus()) {currentGameWasWon = true;}
             updateGameStats(currentGameWasWon);
@@ -92,7 +93,7 @@ public class UI {
             return true;
         }
         else if (input == 2) {
-        	System.out.println("Entering Rock, Paper, Scissors...");
+            System.out.println("Entering Rock, Paper, Scissors...");
             RPS.main();
             if(RPS.uiCheckWinStatus()) {currentGameWasWon = true;}
             updateGameStats(currentGameWasWon);
@@ -100,55 +101,55 @@ public class UI {
             return true;
         }
         else if(input == 3) {
-        	System.out.println("Entering Coin Toss...");
-        //	CoinToss.main();
-        //    if(CoinToss.uiCheckWinStatus()) {currentGameWasWon = true;}
-        	updateGameStats(currentGameWasWon);
+            System.out.println("Entering Coin Toss...");
+
+                if(CoinToss.coinToss()) {currentGameWasWon = true;}
+            updateGameStats(currentGameWasWon);
             playAgain();
-        	return true;
+            return true;
         }
         return false;
     }
-    
-	//after the game plays, it prints out the stats 
-	public static void updateGameStats(boolean currentGameWasWon) {
-		gamesPlayed = gamesPlayed+1;
-		if(currentGameWasWon) {
-			gamesWon = gamesWon + 1;
-		}
-		System.out.println("\nGames won: " + gamesWon);
-		System.out.println("Games played: " + gamesPlayed);
-		double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
-		System.out.println("Win rate: " + winRate + "%\n");
-		
-	}
 
-    
+    //after the game plays, it prints out the stats
+    public static void updateGameStats(boolean currentGameWasWon) {
+        gamesPlayed = gamesPlayed+1;
+        if(currentGameWasWon) {
+            gamesWon = gamesWon + 1;
+        }
+        System.out.println("\nGames won: " + gamesWon);
+        System.out.println("Games played: " + gamesPlayed);
+        double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
+        System.out.println("Win rate: " + winRate + "%\n");
+
+    }
+
+
     /**
      * allows the user to continue playing
      */
     public static void playAgain() {
-    	System.out.println("Press 1 to play " + games.get(currentGame) + " again\nPress 2 to exit to main menu\nPress 3 to exit the arcade");
-    	boolean badInput = true;
+        System.out.println("Press 1 to play " + games.get(currentGame) + " again\nPress 2 to exit to main menu\nPress 3 to exit the arcade");
+        boolean badInput = true;
         while(badInput) {
             if(scanner.hasNextInt()) {
                 int input = scanner.nextInt();
                 if(input == 1) {
-                	badInput=false;
-                	runFile(currentGame);
-                	return;
+                    badInput=false;
+                    runFile(currentGame);
+                    return;
                 }
                 if(input == 2) {
-                	badInput=false;
-                	System.out.println("Exiting to main menu...\n");
-                	runArcade();
-                	return;
+                    badInput=false;
+                    System.out.println("Exiting to main menu...\n");
+                    runArcade();
+                    return;
                 }
                 if(input ==3) {
-                	badInput=false;
-                	System.out.println("Exiting the arcade... Thanks for playing!");
-                	System.exit(0);
-                	return;
+                    badInput=false;
+                    System.out.println("Exiting the arcade... Thanks for playing!");
+                    System.exit(0);
+                    return;
                 }
                 else { //if not 1 or 2 or 3
                     System.out.println("Invalid input. Please select 1 or 2");
@@ -159,7 +160,7 @@ public class UI {
                 System.out.println("Invalid input. Please select 1 or 2");
                 scanner.nextLine();
             }
-        }  
+        }
     }
 
     public static void drawArcadeVisual(){
@@ -195,12 +196,3 @@ public class UI {
         System.out.println("=================================================================================");
     }
 }
-    
-
-
-
-
-
-
-
-
