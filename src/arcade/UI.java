@@ -121,7 +121,6 @@ public class UI {
         System.out.println("Games played: " + gamesPlayed);
         double winRate = Math.round(gamesWon/(double)gamesPlayed*100);
         System.out.println("Win rate: " + winRate + "%\n");
-
     }
 
 
@@ -129,7 +128,6 @@ public class UI {
      * allows the user to continue playing
      */
     public static void playAgain() {
-        drawArcadeVisual();
         System.out.println("Press 1 to play " + games.get(currentGame) + " again\nPress 2 to exit to main menu\nPress 3 to exit the arcade");
         boolean badInput = true;
         while(badInput) {
