@@ -11,12 +11,19 @@ public static int tails = 2;
 
 public static Scanner keyboard = new Scanner(System.in);
 	
+/**
+ * Prints welcome messages 
+ * @param args
+ */
 public static void main(String args[]){
 	System.out.println("Welcome to the game of Coin Toss");
 	System.out.println("Please enter either heads (h) or tails (t)!");
 	check();
 }
 
+/**
+ * Checks for correct input (h, t) and loops until correct input is provided
+ */
 public static void check(){
 	String object= keyboard.next();	
 	if(object.equals("h")) {
@@ -35,6 +42,10 @@ public static void check(){
 	}
 }
 
+/**
+ * Imitates a coin flip and returns the winning coin face 
+ * @return String message, either "HEADS" or "TAILS" 
+ */
 public static String winningCoinPrint(){
 	randomVal = (int)(Math.random() * ((2 - 1) + 1)) + 1;	
 	String win = "";
@@ -61,6 +72,10 @@ public static String winningCoinPrint(){
 	return win;
 }
 
+/**
+ * Checks if randomVal == playerValue (h or t)
+ * @return true if the random coin face is equal to what the player chose 
+ */
 public static boolean winnerCheck() {
 	winningCoinPrint(); 
 	if(randomVal == playerVal) {
@@ -73,6 +88,10 @@ public static boolean winnerCheck() {
 	}
 }
 
+/**
+ * Checks for wins for UI implementation (inside "ui" class)
+ * @return true if the user has won the game
+ */
 public static boolean uiCheckWinStatus(){
 	if(winnerCheck() == true) {
 		return true;
