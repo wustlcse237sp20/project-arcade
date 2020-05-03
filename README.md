@@ -41,3 +41,14 @@ java arcade.UI
 ### Is there anything that you implemented but doesn't currently work?
 * Currently we have everything that we included in this iteration working. 
 
+## Iteration 3 Questions:
+### What user stories were completed in this iteration?
+* We recieved some feed back that our Kanban board could be utilized by more team members rather than just one. In this iteration, we have each team member using the Kanban board for our respective tasks.
+* We added a coin toss game as our 3rd game for the arcade. We also implemented unit testing for the coin toss game.
+* We also implemented additional tests for our UI class.
+* We added some visual elements to our games to make our program outputs more pleasing to the eye
+* We added some wait times and countdown timers to make the games more interactive
+* We added a scoreboard to keep track of the users game stats
+* We added features to exit the arcade or play a game again
+### Is there anything that you implemented but doesn't currently work?
+* Nope! We decided to scrap the Tic-Tac-Toe game and replace it with a coin toss as we were having issues with getting our Tic-Tac-Toe game implemented properly, therefore everything included in this iteration is functional. 
