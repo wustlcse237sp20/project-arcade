@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class CoinToss {
 
-public static int playerVal = 0;
-public static int randomVal = 0; 
+public static int playerVal;
+public static int randomVal; 
 public static int heads = 1;
 public static int tails = 2; 
 
@@ -18,17 +18,16 @@ public static void main(String args[]){
 }
 
 public static void check(){
-	randomVal = (int)(Math.random() * ((2 - 1) + 1)) + 1;	
 	String object= keyboard.next();	
 	if(object.equals("h")) {
-		System.out.println("You choose Heads\nComputer is Tails");
+		System.out.println("You choose Heads, Computer is Tails");
 		playerVal = heads;
-		winnerPrint(object);
+		winnerCheck();
 	}
 	else if(object.equals("t")) {
-		System.out.println("You choose Tails\nComputer is Heads");
+		System.out.println("You choose Tails, Computer is Heads");
 		playerVal = tails;
-		winnerPrint(object);
+		winnerCheck();
 	}
 	else {
 		System.out.println("Oops! Please enter either heads (h) or tails (t)!");
@@ -36,30 +35,43 @@ public static void check(){
 	}
 }
 
-public static void winningCoinPrint(){
+public static String winningCoinPrint(){
+	randomVal = (int)(Math.random() * ((2 - 1) + 1)) + 1;	
+	String win = "";
 	System.out.println("Lets Toss...\n");
 	System.out.println("The winning coin face is...");
 	if(randomVal == heads) {
-		System.out.println("HEADS");
+		win = "HEADS";
 	}
 	if(randomVal == tails) {
-		System.out.println("TAILS");
+		win = "TAILS";
 	}
+	System.out.println(win);
+	return win;
 }
 
-public static void winnerPrint(String object) {
+public static boolean winnerCheck() {
 	winningCoinPrint(); 
 	if(randomVal == playerVal) {
 		System.out.println("YOU WIN");
+		return true;
 	}
-	else if(randomVal != playerVal) {
+	else{
 		System.out.println("You lose");
+		return false;
 	}
+
 }
 
-
-
+public static boolean uiCheckWinStatus(){
+	if(winnerCheck() == true) {
+		return true;
+	}
+	else {
+		return false;
+	}
 	
+}
 
 
 }
