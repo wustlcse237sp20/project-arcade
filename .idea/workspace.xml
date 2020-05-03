@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="" />
+    <list default="true" id="693ce437-91ba-4873-8bfe-959360907044" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arcade/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arcade/UI.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArcadeTestsComprehensive">
+  <component name="RunManager" selected="Application.UI">
     <configuration name="Hangman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="arcade.Hangman" />
       <module name="Arcade" />
@@ -115,8 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="Application.UI" />
+        <item itemvalue="JUnit.ArcadeTestsComprehensive" />
         <item itemvalue="JUnit.CoinTossTests" />
         <item itemvalue="JUnit.UITests" />
         <item itemvalue="Application.Hangman" />

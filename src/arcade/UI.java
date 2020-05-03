@@ -20,7 +20,6 @@ public class UI {
     public static void main(String[] args) {
         populateMap();
         System.out.println("Welcome to the Java Arcade!");
-        drawArcadeVisual();
         runArcade();
         scanner.close();
     }
@@ -35,6 +34,7 @@ public class UI {
      * prompts the user for which game they want to play
      */
     private static void runArcade() {
+        drawArcadeVisual();
         System.out.println("Select 1, 2, or 3, and press enter to play!" + "\n");
         boolean badInput = true;
         while(badInput) {
