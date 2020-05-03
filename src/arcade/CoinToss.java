@@ -38,7 +38,18 @@ public static void check(){
 public static String winningCoinPrint(){
 	randomVal = (int)(Math.random() * ((2 - 1) + 1)) + 1;	
 	String win = "";
-	System.out.println("Lets Toss...\n");
+	System.out.println("Lets Toss...");
+	try {
+		Thread.sleep(500);
+		System.out.println("3");
+		Thread.sleep(500);
+		System.out.println("2");
+		Thread.sleep(500);
+		System.out.println("1");
+		Thread.sleep(500);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
 	System.out.println("The winning coin face is...");
 	if(randomVal == heads) {
 		win = "HEADS";
@@ -46,7 +57,7 @@ public static String winningCoinPrint(){
 	if(randomVal == tails) {
 		win = "TAILS";
 	}
-	System.out.println(win);
+	System.out.println("\n   * * *  \n *       *\n*  "+ win +"  *\n *       *\n   * * *  \n");
 	return win;
 }
 
@@ -60,7 +71,6 @@ public static boolean winnerCheck() {
 		System.out.println("You lose");
 		return false;
 	}
-
 }
 
 public static boolean uiCheckWinStatus(){
@@ -70,8 +80,6 @@ public static boolean uiCheckWinStatus(){
 	else {
 		return false;
 	}
-	
 }
-
 
 }
